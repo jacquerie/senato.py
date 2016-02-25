@@ -68,3 +68,5 @@ target/
 # pyenv
 .python-version
 
+# Data downloaded by the spider
+*.akn
