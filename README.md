@@ -23,9 +23,8 @@ The data can be analysed using the Jupyter notebook provided in this repository.
 
 1. Clone this repository: `git clone https://github.com/jacquerie/senato.py.git`
 2. Install the dependencies: `cd senato.py && pip install -r requirements.txt`
-3. Create a folder for the amendments: `mkdir -p data/cirinna`
-4. Fetch the amendments by running the scraper: `scrapy crawl cirinna`
-5. Examine the analysis by running the notebook: `jupyter notebook analysis.ipynb`
+3. Fetch the amendments by running the scraper: `scrapy crawl cirinna`
+4. Examine the analysis by running the notebook: `jupyter notebook analysis.ipynb`
 
 ## About senato.py ##
 
