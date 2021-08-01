@@ -10,12 +10,10 @@ AMENDMENT_URL = '/leg/17/BGT/Testi/Emend/00{parent}/00{_id}.akn'
 HREF_REGEX = r'id=(?P<_id>\d+)&idoggetto=(?P<parent>\d+)'
 
 
-class SenatoSpider(scrapy.Spider):
-    name = 'senato'
+class CirinnaSpider(scrapy.Spider):
+    name = 'cirinna'
     allowed_domains = ['senato.it']
-    start_urls = [
-        'http://www.senato.it/leg/17/BGT/Schede/Ddliter/testi/46051_testi.htm'
-    ]
+    start_urls = ['http://www.senato.it/leg/17/BGT/Schede/Ddliter/testi/46051_testi.htm']
 
     def parse(self, response):
         for href in response.xpath(AMENDMENT_XPATH).extract():
@@ -31,7 +29,7 @@ class SenatoSpider(scrapy.Spider):
 
     def download_amendment(self, response):
         relative_filename = response.url.split('/')[-1]
-        absolute_filename = os.path.join(os.getcwd(), 'data', relative_filename)
+        absolute_filename = os.path.join(os.getcwd(), 'data', self.name, relative_filename)
 
         with open(absolute_filename, 'wb') as f:
             f.write(response.body)
