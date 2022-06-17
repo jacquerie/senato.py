@@ -73,7 +73,7 @@ qtconsole==5.1.1
 QtPy==1.9.0
 queuelib==1.6.1
 scipy==1.7.0
-Scrapy==2.5.0
+Scrapy==2.6.1
 Send2Trash==1.7.1
 service-identity==21.1.0
 six==1.16.0
